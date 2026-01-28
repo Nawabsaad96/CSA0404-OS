@@ -4,7 +4,6 @@
 int main() {
     struct stat st;
     stat("sample.txt", &st);
-
     printf("Permissions: ");
     printf((st.st_mode & S_IRUSR) ? "r" : "-");
     printf((st.st_mode & S_IWUSR) ? "w" : "-");
